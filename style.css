@@ -1,0 +1,131 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    }
+/* FEJLÉC (A rajzod alapján) */
+.fejlec {
+    background-color: #ffdae9;
+    border: 3px dashed #ff85a2;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* mobilon összefogja az elemeket */
+}
+
+/* BAL OLDAL: LOGÓ ÉS MOTÓ */
+.bal {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #ff85a2;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+.motto {
+    background-color: #ff85a2;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* KÖZÉPSŐ RÉSZ: ÜDVÖZLÉS */
+.kozep {
+    text-align: center;
+    flex: 1;
+    margin: 10px 20px;
+}
+
+.kozep h1 {
+    font-size: 40px;
+    margin: 5px 0;
+    color: #111;
+}
+
+.bemu {
+    color: #666;
+    font-style: italic;
+    font-size: 20px;
+}
+
+/* JOBB OLDAL: NAVIGÁCIÓS SÁV */
+.jobb nav {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #ff85a2;
+    text-align: center;
+}
+
+.jobb ul {
+    list-style: none; /* eltünteti a pöttyöket */
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.jobb li {
+    margin: 8px 0;
+}
+
+.jobb a {
+    text-decoration: none;
+    color: #d63384;
+    font-weight: bold;
+}
+
+.jobb a:hover {
+    color: #ff4081;
+}
+
+/* TARTALMI SZEKCIÓK */
+section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #d63384;
+    border-bottom: 2px solid #ffdae9;
+    padding-bottom: 5px;
+}
+
+/* CSOMAGOK (KÁRTYÁK) */
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff5f8;
+    border: 1px solid #ffb6c1;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* LÁBLÉC */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffdae9;
+    color: #666;
+    margin-top: 20px;
+}
