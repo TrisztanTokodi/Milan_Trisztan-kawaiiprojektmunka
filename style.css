@@ -150,3 +150,44 @@ h2 {
 .figura:hover {
     transform: translateX(-50%) scale(1.1);
 }
+
+/* KÉPEK KONTÉNER (Egymás mellé teszi a két képet) */
+.kepek-kontener {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Távolság a két kép között */
+    margin-top: 25px;
+    flex-wrap: wrap; /* Mobilon egymás alá rakja őket */
+}
+
+/* EGY-EGY KÉP KÁRTYÁJA (Keret és formázás) */
+.kep-kartya {
+    background-color: #ffffff;
+    border: 3px dashed #ff85a2; /* Szaggatott rózsaszín keret */
+    border-radius: 20px;       /* Lekerekített sarkok */
+    padding: 10px;             /* Belső margó a keret és kép között */
+    box-shadow: 0 8px 15px rgba(255, 133, 162, 0.2); /* Lágy rózsaszínes árnyék */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 25%;            /* A két kép egyenlően osztozik a helyen */
+}
+
+/* A KÉPEK IGAZÍTÁSA */
+.kep-kartya img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* RÁMUTATÁSI EFFEKT (Kicsit megemelkedik) */
+.kep-kartya:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(255, 133, 162, 0.35);
+}
+
+/* Mobil nézet igazítás */
+@media (max-width: 600px) {
+    .kep-kartya {
+        max-width: 100%; /* Mobilon teljes szélességűek lesznek */
+    }
+}
