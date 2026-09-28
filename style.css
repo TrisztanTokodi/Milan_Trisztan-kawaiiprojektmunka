@@ -154,7 +154,7 @@ h2 {
 /* KÉPEK KONTÉNER (Egymás mellé teszi a két képet) */
 .kepek-kontener {
     display: flex;
-    justify-content: center;
+    justify-content: right; /* Balra igazítja a képeket */
     gap: 25px; /* Távolság a két kép között */
     margin-top: 25px;
     flex-wrap: wrap; /* Mobilon egymás alá rakja őket */
@@ -168,7 +168,7 @@ h2 {
     padding: 10px;             /* Belső margó a keret és kép között */
     box-shadow: 0 8px 15px rgba(255, 133, 162, 0.2); /* Lágy rózsaszínes árnyék */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 25%;            /* A két kép egyenlően osztozik a helyen */
+    max-width: 15%;            /* A két kép egyenlően osztozik a helyen */
 }
 
 /* A KÉPEK IGAZÍTÁSA */
