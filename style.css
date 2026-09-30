@@ -153,6 +153,7 @@ h2 {
 
 /* KÉPEK KONTÉNER (Egymás mellé teszi a két képet) */
 .kepek-kontener {
+    float: right;
     display: flex;
     justify-content: right; /* Balra igazítja a képeket */
     gap: 25px; /* Távolság a két kép között */
@@ -162,6 +163,7 @@ h2 {
 
 /* EGY-EGY KÉP KÁRTYÁJA (Keret és formázás) */
 .kep-kartya {
+    width: 200px;
     background-color: #ffffff;
     border: 3px dashed #ff85a2; /* Szaggatott rózsaszín keret */
     border-radius: 20px;       /* Lekerekített sarkok */
@@ -190,4 +192,25 @@ h2 {
     .kep-kartya {
         max-width: 100%; /* Mobilon teljes szélességűek lesznek */
     }
+}
+
+.kep-kartya img {
+    cursor: zoom-in;
+}
+
+#nagykep {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    z-index: 1000;
+}
+
+#nagykep img {
+    max-width: 95%;
+    max-height: 95%;
 }

@@ -18,7 +18,7 @@
         <div class="kozep">
             
             <h1>Üdvözlünk az cukitengerben!❤️</h1>
-            <p class="bemu">Ha ide tévettél, akkor már félig sikeres vagy abban, hogy
+            <p class="bemu">Ha ide tévedtél, akkor már félig sikeres vagy abban, hogy
                 ez életedet egy jobb útra térítsd!
             </p>
             
@@ -35,7 +35,7 @@
                 <ul>
                     <li><a href="#fooldal">Főoldal</a></li>
                     <li><a href="#csomagok">Csomagok</a></li>
-                    <li><a href="#rolunk">Rólunk</a></li>
+                    <li><a href="rolunk.html">Rólunk</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,6 +45,16 @@
         <h2>Gondolkodásunk</h2>
         <p>A Kawaii Support ötlete abból az felismerésből született, hogy sokan küzdenek a magánnyal és a rossz mentális állapottal.</p>
 
+        <!-- A 2 KÉP A SZÖVEG ALATT -->
+        <div class="kepek-kontener">
+            <div class="kep-kartya">
+                <img src="rajz.png" alt="Első kép" onclick="megnyit(this.src)">
+            </div>
+            <div class="kep-kartya">
+                <img src="gondolkodas.jpg" alt="Második kép" onclick="megnyit(this.src)">
+            </div>
+        </div>
+
         <h3>Mit nyújtunk számodra?</h3>
         <ul>
             <li><strong>Támogató jelenlét:</strong> Egy kis támogató cukiságra minden nap számíthatsz.</li>
@@ -53,15 +63,7 @@
             <li><strong>Szeretet és odafigyelés:</strong> Peace and Love</li>
         </ul>
 
-        <!-- A 2 KÉP A SZÖVEG ALATT -->
-        <div class="kepek-kontener">
-            <div class="kep-kartya">
-                <img src="rajz.png" alt="Első kép">
-            </div>
-            <div class="kep-kartya">
-                <img src="gondolkodas.jpg" alt="Második kép">
-            </div>
-        </div>
+        
        
     </section>
     <section id="fooldal">
@@ -107,10 +109,15 @@
             </div>
         </div>
     </section>
-
+    
     <div class="lab">
         <p>&copy; 2026 Kawaiimprove - Kawaii Support | <a href="rolunk.html" style="color: #d63384;">Rólunk oldal</a></p>
     </div>
+
+    <div id="nagykep" onclick="bezar()">
+        <img id="nagykepImg" src="" alt="">
+    </div>
+
 
     <script src="sricpt.js"></script>
 </body>

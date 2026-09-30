@@ -15,3 +15,16 @@ figura.addEventListener('click', () => {
         figura.src = alapKep;
     }, 2000);
 });
+
+function megnyit(forras) {
+    document.getElementById('nagykepImg').src = forras;
+    document.getElementById('nagykep').style.display = 'flex';
+}
+
+function bezar() {
+    document.getElementById('nagykep').style.display = 'none';
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') bezar();
+});
