@@ -33,7 +33,7 @@
             <nav>
                 <strong>NAVIGÁCIÓS SÁV</strong>
                 <ul>
-                    <li><a href="#fooldal">Főoldal</a></li>
+                    <li><a href="#fooldal">Projektünk</a></li>
                     <li><a href="#csomagok">Csomagok</a></li>
                     <li><a href="rolunk.html">Rólunk</a></li>
                 </ul>
@@ -67,7 +67,7 @@
        
     </section>
     <section id="fooldal">
-        <h2>Fő oldal</h2>
+        <h2>Projektünk</h2>
         <h3>Miért hoztuk létre a céget?</h3>
         <p>A Kawaiimprove csapatának fő célja, hogy a magányos kis gamerboyokon segítsen kreatív és önfejlesztő módon.</p>
         <h3>Min szeretnénk segíteni?</h3>
@@ -77,39 +77,62 @@
             <li>Kreatív ötletek és kódolás hiánya</li>
         </ul>
 
-        <h3>Hogyan valósitjuk ezt meg?</h3>
+        <h3>Hogyan valósítjuk ezt meg?</h3>
         <p>Egyedi, kawaii fejlesztésekkel, odafigyeléssel és folyamatos támogatással</p>
     </section>
     
     <section id="csomagok">
         <h2>Csomagjaink</h2>
         <div class="cards">
-            <div class="card">
-                <h3>Alap csomag</h3>
-                <ul>
-                    <li>Beszélgető partner</li>
-                    <li>Napi 1 órás csevegési limit</li>
-                    <li>Végtelen cukiság Hinatával</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Pro csomag</h3>
-                <ul>
-                    <li>Alap csomag feltételei</li>
-                    <li>Korlátlan napi csevegési limit</li>
-                    <li>Személyre szabható cuki Hinata</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Pro+ csomag</h3>
-                <ul>
-                    <li>Az alap csomag és a Pro csomag feltételei</li>
-                    <li>Közös programozás Hinatával</li>
-                </ul>
-            </div>
+    <div class="card" data-kep="hinata2.jpg">
+        <h3>Alap csomag</h3>
+        <ul>
+            <li>Beszélgető partner</li>
+            <li>Napi 1 órás csevegési limit</li>
+            <li>Végtelen cukiság Hinatával</li>
+        </ul>
+
+        <div class="popup-szoveg">
+            <h3>Alap csomag</h3>
+            <p><strong>Beszélgető partner:</strong> Hinata mindig rendelkezésedre áll egy kellemes beszélgetéshez. Beszélgess vele a napodról, a gondolataidról, a hobbidról vagy akár teljesen random témákról.</p>
+            <p><strong>Napi 1 órás csevegési limit:</strong> Az Alap csomag naponta legfeljebb 1 óra beszélgetést biztosít, így minden nap jut idő egy kis kikapcsolódásra és társalgásra.</p>
+            <p><strong>Végtelen cukiság Hinatával:</strong> Barátságos, kedves és vidám beszélgetések várnak rád. Hinata mindig igyekszik jó hangulatot teremteni és feldobni a napodat.</p>
         </div>
+    </div>
+
+    <div class="card" data-kep="hinata3.jpg">
+        <h3>Pro csomag</h3>
+        <ul>
+            <li>Alap csomag feltételei</li>
+            <li>Korlátlan napi csevegési limit</li>
+            <li>Személyre szabható cuki Hinata</li>
+        </ul>
+
+        <div class="popup-szoveg">
+            <h3>Pro csomag</h3>
+            <p><strong>Alap csomag feltételei:</strong> A csomag aktiválásával hozzáférést kapsz a szolgáltatás alapvető funkcióihoz, amelyek egyszerű és kényelmes használatot biztosítanak a mindennapokban.</p>
+            <p><strong>Korlátlan napi csevegési limit:</strong> Beszélgess Hinatával megszakítás nélkül, ameddig csak szeretnél. Nincs napi időkorlát, így bármikor visszatérhetsz hozzá egy újabb beszélgetésre.</p>
+            <p><strong>Személyre szabható cuki Hinata:</strong> Alakítsd a beszélgetések hangulatát a saját ízlésed szerint. Válaszd ki, hogyan kommunikáljon veled Hinata, és tedd személyesebbé a közös beszélgetéseket.</p>
+        </div>
+    </div>
+
+    <div class="card" data-kep="hinatacuddle.jpg">
+        <h3>Pro+ csomag</h3>
+        <ul>
+            <li>Az alap csomag és a Pro csomag feltételei</li>
+            <li>Közös programozás Hinatával</li>
+        </ul>
+
+        <div class="popup-szoveg">
+            <h3>Pro+ csomag</h3>
+            <p><strong>Az Alap és Pro csomag összes feltétele:</strong> A csomag tartalmazza az Alap és a Pro csomagban elérhető összes korábbi funkciót, így egyetlen csomaggal minden fontos lehetőséghez hozzáférhetsz.</p>
+            <p><strong>Közös programozás Hinatával:</strong> Tanulj meg programozni teljesen az alapoktól Hinata segítségével! Hinata lépésről lépésre vezet végig a programozás világán, közben pedig kedvesen és érthetően magyarázza el a legfontosabb dolgokat.  Kezdheted teljesen nulláról, és ahogy egyre ügyesebb leszel, együtt haladhattok tovább az izgalmasabb feladatok és kisebb projektek felé.</p>
+        </div>
+    </div>
+</div> 
+<p> <i>Előrendelés hamarosan...</i></p>
     </section>
-    
+   
     <div class="lab">
         <p>&copy; 2026 Kawaiimprove - Kawaii Support | <a href="rolunk.html" style="color: #d63384;">Rólunk oldal</a></p>
     </div>
@@ -118,6 +141,13 @@
         <img id="nagykepImg" src="" alt="">
     </div>
 
+    <div id="csomagModal" onclick="csomagBezar()">
+        <div class="csomag-doboz" onclick="event.stopPropagation()">
+            <img id="csomagKep" src="" alt="">
+            <div class="csomag-szoveg" id="csomagTartalom"></div>
+            <button class="csomag-x" onclick="csomagBezar()">✕</button>
+        </div>
+    </div>
 
     <script src="sricpt.js"></script>
 </body>

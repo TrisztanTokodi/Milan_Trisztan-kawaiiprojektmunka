@@ -25,6 +25,24 @@ function bezar() {
     document.getElementById('nagykep').style.display = 'none';
 }
 
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') bezar();
+// Csomag popup
+document.querySelectorAll('.card').forEach(function (kartya) {
+    kartya.addEventListener('click', function () {
+        document.getElementById('csomagKep').src = kartya.dataset.kep;
+        document.getElementById('csomagTartalom').innerHTML = kartya.querySelector('.popup-szoveg').innerHTML;
+        document.getElementById('csomagModal').style.display = 'flex';
+    });
 });
+
+function csomagBezar() {
+    document.getElementById('csomagModal').style.display = 'none';
+}
+
+// Esc mindkettőt bezárja (ez váltja le a régi keydown részt)
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        bezar();
+        csomagBezar();
+    }
+});
+

@@ -214,3 +214,68 @@ h2 {
     max-width: 95%;
     max-height: 95%;
 }
+
+.card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+}
+
+#csomagModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.csomag-doboz {
+    position: relative;
+    display: flex;
+    height: 360px;                 /* a kép is ehhez igazodik */
+    width: min(600px, 92vw);
+    background: white;
+    border: 3px dashed #ff85a2;
+    border-radius: 20px;
+    overflow: hidden;              /* a kép követi a lekerekítést */
+}
+
+.csomag-doboz img {
+    height: 100%;                  /* vonaltól vonalig */
+    aspect-ratio: 9 / 16;          /* 9x16 arány */
+    object-fit: cover;
+}
+
+.csomag-szoveg {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.csomag-szoveg h3 {
+    color: #d63384;
+    margin-top: 0;
+}
+
+.csomag-x {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #d63384;
+}
+
+@media (max-width: 600px) {
+    .csomag-doboz { height: 300px; }
+}
+
+.popup-szoveg {
+    display: none;
+}
