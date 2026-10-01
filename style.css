@@ -8,7 +8,7 @@ body {
 
 /* FEJLÉC TELJES HÁTTÉRREL */
 .fejlec {
-    background-image: url('hatterkep.jpg');
+    background-image: url('kepek/hatterkep.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

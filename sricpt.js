@@ -2,8 +2,8 @@
 const figura = document.getElementById('figuram');
 
 // Képek elérési útjai (Írd át a saját képeid / GIF-jeid nevére!)
-const alapKep = 'lany1.gif';      // Pl. alapértelmezett lebegő/integető GIF
-const reakcioKep = 'lany2.gif'; // Pl. pörgő, ugráló vagy szivecskés GIF
+const alapKep = 'kepek/lany1.gif';      // Pl. alapértelmezett lebegő/integető GIF
+const reakcioKep = 'kepek/lany2.gif'; // Pl. pörgő, ugráló vagy szivecskés GIF
 
 // Eseményfigyelő: amikor valaki rákattint a figurára
 figura.addEventListener('click', () => {
