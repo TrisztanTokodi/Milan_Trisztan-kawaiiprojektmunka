@@ -151,26 +151,26 @@ h2 {
     transform: translateX(-50%) scale(1.1);
 }
 
-/* KÉPEK KONTÉNER (Egymás mellé teszi a két képet) */
+
 .kepek-kontener {
     float: right;
     display: flex;
-    justify-content: right; /* Balra igazítja a képeket */
-    gap: 25px; /* Távolság a két kép között */
+    justify-content: right; 
+    gap: 25px; 
     margin-top: 25px;
-    flex-wrap: wrap; /* Mobilon egymás alá rakja őket */
+    flex-wrap: wrap; 
 }
 
-/* EGY-EGY KÉP KÁRTYÁJA (Keret és formázás) */
+
 .kep-kartya {
     width: 200px;
     background-color: #ffffff;
-    border: 3px dashed #ff85a2; /* Szaggatott rózsaszín keret */
-    border-radius: 20px;       /* Lekerekített sarkok */
-    padding: 10px;             /* Belső margó a keret és kép között */
-    box-shadow: 0 8px 15px rgba(255, 133, 162, 0.2); /* Lágy rózsaszínes árnyék */
+    border: 3px dashed #ff85a2; 
+    border-radius: 20px;       
+    padding: 10px;             
+    box-shadow: 0 8px 15px rgba(255, 133, 162, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 15%;            /* A két kép egyenlően osztozik a helyen */
+    max-width: 15%;            
 }
 
 /* A KÉPEK IGAZÍTÁSA */
@@ -181,7 +181,7 @@ h2 {
     border-radius: 12px;
 }
 
-/* RÁMUTATÁSI EFFEKT (Kicsit megemelkedik) */
+
 .kep-kartya:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(255, 133, 162, 0.35);
@@ -190,7 +190,7 @@ h2 {
 /* Mobil nézet igazítás */
 @media (max-width: 600px) {
     .kep-kartya {
-        max-width: 100%; /* Mobilon teljes szélességűek lesznek */
+        max-width: 100%; 
     }
 }
 
@@ -237,17 +237,17 @@ h2 {
 .csomag-doboz {
     position: relative;
     display: flex;
-    height: 360px;                 /* a kép is ehhez igazodik */
+    height: 360px;                 
     width: min(600px, 92vw);
     background: white;
     border: 3px dashed #ff85a2;
     border-radius: 20px;
-    overflow: hidden;              /* a kép követi a lekerekítést */
+    overflow: hidden;              
 }
 
 .csomag-doboz img {
-    height: 100%;                  /* vonaltól vonalig */
-    aspect-ratio: 9 / 16;          /* 9x16 arány */
+    height: 100%;                 
+    aspect-ratio: 9 / 16;          
     object-fit: cover;
 }
 
@@ -278,4 +278,103 @@ h2 {
 
 .popup-szoveg {
     display: none;
+}
+
+
+.pay-btn {
+    background-color: #d63384;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.pay-btn:hover {
+    background-color: #b50c44;
+    transform: scale(1.05);
+}
+
+.pay-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1100; 
+}
+
+
+.pay-modal-content {
+    background: white;
+    border: 3px dashed #ff85a2;
+    border-radius: 20px;
+    padding: 25px;
+    width: min(400px, 90vw);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(255, 133, 162, 0.3);
+}
+
+.pay-modal-content h3 {
+    color: #d63384;
+    margin-top: 0;
+}
+
+.pay-modal-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+#pay-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#pay-email {
+    padding: 12px;
+    border: 2px solid #ffdae9;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#pay-email:focus {
+    border-color: #d63384;
+}
+
+.submit-pay-btn {
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-pay-btn:hover {
+    background-color: #d63384;
+}
+
+.pay-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: #d63384;
+    cursor: pointer;
 }

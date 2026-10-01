@@ -46,3 +46,39 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+// FIZETÉSI MODAL KEZELÉSE
+const openPayBtn = document.getElementById('open-pay-btn');
+const payModal = document.getElementById('pay-modal');
+const payForm = document.getElementById('pay-form');
+
+// Megnyitás a gombra kattintva
+openPayBtn.addEventListener('click', () => {
+    payModal.style.display = 'flex';
+});
+
+// Bezárás függvény
+function payModalBezar() {
+    payModal.style.display = 'none';
+}
+
+// Bezárás ha a háttérre kattintanak
+payModal.addEventListener('click', (e) => {
+    if (e.target === payModal) {
+        payModalBezar();
+    }
+});
+
+// Űrlap beküldése
+payForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // Megakadályozza az oldal újratöltését
+    
+    const email = document.getElementById('pay-email').value;
+    
+    alert(`Köszönjük az előrendelést! Hinata értesít majd a(z) ${email} címen, amint elérhető lesz. 💕`);
+    
+    // Itt állíthatod be, ha át akarod irányítani pl. Stripe / Barion fizetési oldalra:
+    // window.location.href = "https://fizetesi-szolgaltato.hu?email=" + encodeURIComponent(email);
+    
+    payModalBezar();
+    payForm.reset(); // Kiüríti a beviteli mezőt
+});

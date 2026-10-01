@@ -130,7 +130,9 @@
         </div>
     </div>
 </div> 
-<p> <i>Előrendelés hamarosan...</i></p>
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="open-pay-btn" class="pay-btn">🌸 Előrendelés most 🌸</button>
+    </div>
     </section>
    
     <div class="lab">
@@ -146,6 +148,19 @@
             <img id="csomagKep" src="" alt="">
             <div class="csomag-szoveg" id="csomagTartalom"></div>
             <button class="csomag-x" onclick="csomagBezar()">✕</button>
+        </div>
+    </div>
+
+    <div id="pay-modal" class="pay-modal">
+        <div class="pay-modal-content">
+            <button class="pay-close" onclick="payModalBezar()">&times;</button>
+            <h3>Előrendelés indítása ✨</h3>
+            <p>Adataid biztonságban vannak nálam! (uwwu) Add meg az e-mail címed a folytatáshoz:</p>
+            
+            <form id="pay-form">
+                <input type="email" id="pay-email" placeholder="valaki@example.com" required>
+                <button type="submit" class="submit-pay-btn">Tovább a fizetéshez 💕</button>
+            </form>
         </div>
     </div>
 
